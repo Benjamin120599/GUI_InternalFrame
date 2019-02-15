@@ -56,16 +56,14 @@ class VentanaPrincipal extends JFrame {
 		
 		JToolBar toolBar = new JToolBar();
 			toolBar.add(new JButton("Add", iconos("./src/add.png")));
-			toolBar.add(new JButton("Save"));
+			toolBar.add(new JButton("Edit", iconos("./src/add.png")));
 		add(toolBar, BorderLayout.PAGE_START);
 		
 	}
 	
 	public ImageIcon iconos(String ruta) {
-		
 		ImageIcon imag = new ImageIcon(ruta+"");
 		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
-		
 		return img;
 	}
 	
