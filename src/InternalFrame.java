@@ -31,6 +31,9 @@ class VentanaPrincipal extends JFrame {
 		printing = new JMenu("Printing");
 		menuBar.add(printing);
 		
+		transaction = new JMenu("Transaction");
+		menuBar.add(transaction);
+		
 	}
 	
 	
