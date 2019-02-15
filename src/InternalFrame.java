@@ -55,8 +55,11 @@ class VentanaPrincipal extends JFrame {
 		
 		
 		JToolBar toolBar = new JToolBar();
-			toolBar.add(new JButton("Add", iconos("./src/add.png")));
+			toolBar.add(new JButton("Add", iconos("./src/Add.png")));
 			toolBar.add(new JButton("Edit", iconos("./src/Folder.png")));
+			toolBar.add(new JButton("Back", iconos("./src/Back.png")));
+			toolBar.add(new JButton("Go", iconos("./src/Go.png")));
+			
 		add(toolBar, BorderLayout.PAGE_START);
 		
 	}
