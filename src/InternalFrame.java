@@ -7,6 +7,7 @@ class VentanaPrincipal extends JFrame {
 	JMenuBar menuBar;
 	JMenu masters, booking, testPerform, printing, transaction, labReports, settings, utilities, window, help;
 	JInternalFrame iF;
+	JPanel panel1;
 	
 	public VentanaPrincipal() {
 		
@@ -81,29 +82,42 @@ class VentanaPrincipal extends JFrame {
 			iF.setDefaultCloseOperation(HIDE_ON_CLOSE);
 			iF.setVisible(true);
 			
-			JPanel panel1 = new JPanel();
+			panel1 = new JPanel();
 				panel1.setBackground(Color.WHITE);
 				panel1.setBounds(5, 5, 870, 245);
 				panel1.setLayout(null);
 				
-				JLabel lbl1 = new JLabel("Patient ID");
-				lbl1.setBounds(10, 10, 100, 30);
-				panel1.add(lbl1);
+				JLabel lbl1 = new JLabel("Patient ID: ");
+				metodoMagico(panel1, lbl1, 10, 10, 100, 30);
 				
-				JLabel lbl2 = new JLabel("Name");
-				lbl2.setBounds(10, 40, 100, 30);
-				panel1.add(lbl2);
+				JLabel lbl2 = new JLabel("Name: ");
+				metodoMagico(panel1, lbl2, 10, 40, 100, 30);
 				
-				JLabel lbl3 = new JLabel("Sex");
-				lbl3.setBounds(10, 70, 100, 30);
-				panel1.add(lbl3);
+				JLabel lbl3 = new JLabel("Sex: ");
+				metodoMagico(panel1, lbl3, 10, 70, 100, 30);
 				
-				JLabel lbl4 = new JLabel("Referred By");
-				lbl4.setBounds(10, 100, 100, 30);
-				panel1.add(lbl4);
+				JLabel lbl4 = new JLabel("Referred By: ");
+				metodoMagico(panel1, lbl4, 10, 100, 100, 30);
 				
 				JTextField caja1 = new JTextField();
+				metodoMagico(panel1, caja1, 85, 15, 90, 20);
 				
+				JTextField caja2 = new JTextField();
+				metodoMagico(panel1, caja2, 85, 105, 100, 20);
+				
+				JTextField caja3 = new JTextField();
+				metodoMagico(panel1, caja3, 160, 45, 130, 20);
+				
+				JComboBox combo1 = new JComboBox();
+				combo1.addItem("MR.");
+				combo1.addItem("MRS.");
+				combo1.addItem("MISS.");
+				metodoMagico(panel1, combo1, 85, 45, 60, 20);
+				
+				JComboBox combo2 = new JComboBox();
+				combo2.addItem("MALE");
+				combo2.addItem("FEMALE");
+				metodoMagico(panel1, combo2, 85, 75, 70, 20);
 				
 				
 			iF.add(panel1);
@@ -118,6 +132,10 @@ class VentanaPrincipal extends JFrame {
 		return img;
 	}
 	
+	public void metodoMagico(JPanel panel, JComponent comp, int x, int y, int w, int h) {
+		comp.setBounds(x, y, w, h);
+		panel.add(comp);
+	}
 	
 }
 
