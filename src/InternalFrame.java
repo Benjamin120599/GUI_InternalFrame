@@ -64,6 +64,7 @@ class VentanaPrincipal extends JFrame {
 			toolBar.add(new JButton("Print", iconos("./src/Print.png")));
 			toolBar.add(new JButton("Cancel", iconos("./src/Cancel.png")));
 			toolBar.add(new JButton("Settings", iconos("./src/Settings.png")));
+			toolBar.add(new JButton("Delete", iconos("./src/Delete.png")));
 			
 		add(toolBar, BorderLayout.PAGE_START);
 		
