@@ -34,6 +34,9 @@ class VentanaPrincipal extends JFrame {
 		transaction = new JMenu("Transaction");
 		menuBar.add(transaction);
 		
+		labReports = new JMenu("Lab Reports");
+		menuBar.add(labReports);
+		
 	}
 	
 	
