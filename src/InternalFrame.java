@@ -83,8 +83,26 @@ class VentanaPrincipal extends JFrame {
 			
 			JPanel panel1 = new JPanel();
 				panel1.setBackground(Color.WHITE);
-				//panel1.setSize(890, 255);
 				panel1.setBounds(5, 5, 870, 245);
+				panel1.setLayout(null);
+				
+				JLabel lbl1 = new JLabel("Patient ID");
+				lbl1.setBounds(10, 10, 100, 30);
+				panel1.add(lbl1);
+				
+				JLabel lbl2 = new JLabel("Name");
+				lbl2.setBounds(10, 40, 100, 30);
+				panel1.add(lbl2);
+				
+				JLabel lbl3 = new JLabel("Sex");
+				lbl3.setBounds(10, 70, 100, 30);
+				panel1.add(lbl3);
+				
+				JLabel lbl4 = new JLabel("Referred By");
+				lbl4.setBounds(10, 100, 100, 30);
+				panel1.add(lbl4);
+				
+				JTextField caja1 = new JTextField();
 				
 				
 				
