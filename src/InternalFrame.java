@@ -106,7 +106,7 @@ class VentanaPrincipal extends JFrame {
 				metodoMagico(panel1, caja2, 85, 105, 100, 20);
 				
 				JTextField caja3 = new JTextField();
-				metodoMagico(panel1, caja3, 160, 45, 130, 20);
+				metodoMagico(panel1, caja3, 160, 45, 180, 20);
 				
 				JComboBox combo1 = new JComboBox();
 				combo1.addItem("MR.");
@@ -119,6 +119,14 @@ class VentanaPrincipal extends JFrame {
 				combo2.addItem("FEMALE");
 				metodoMagico(panel1, combo2, 85, 75, 70, 20);
 				
+				JLabel lbl5 = new JLabel("Age: ");
+				metodoMagico(panel1, lbl5, 175, 70, 70, 30);
+				
+				JTextField caja4 = new JTextField("0");
+				caja4.setHorizontalAlignment(JTextField.RIGHT);
+				metodoMagico(panel1, caja4, 205, 75, 30, 20);
+				
+				
 				
 			iF.add(panel1);
 			desktopPane.add(iF);
@@ -128,7 +136,7 @@ class VentanaPrincipal extends JFrame {
 	
 	public ImageIcon iconos(String ruta) {
 		ImageIcon imag = new ImageIcon(ruta+"");
-		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(23, 23, Image.SCALE_DEFAULT));
+		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
 		return img;
 	}
 	
