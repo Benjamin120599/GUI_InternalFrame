@@ -43,6 +43,9 @@ class VentanaPrincipal extends JFrame {
 		utilities = new JMenu("Utilities");
 		menuBar.add(utilities);
 		
+		window = new JMenu("Window");
+		menuBar.add(window);
+		
 	}
 	
 	
