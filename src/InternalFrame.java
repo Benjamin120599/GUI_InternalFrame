@@ -49,6 +49,13 @@ class VentanaPrincipal extends JFrame {
 		help = new JMenu("Help");
 		menuBar.add(help);
 		
+		setJMenuBar(menuBar);
+		
+		JToolBar toolBar = new JToolBar();
+			
+		
+		add(toolBar, BorderLayout.PAGE_START);
+		
 	}
 	
 	
