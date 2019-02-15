@@ -176,6 +176,12 @@ class VentanaPrincipal extends JFrame {
 				JTextField caja10 = new JTextField();
 				metodoMagico(panel1, caja10, 470, 135, 100, 20);
 				
+				JLabel lbl15 = new JLabel("E-mail: ");
+				metodoMagico(panel1, lbl15, 400, 160, 70, 30);
+				
+				JTextField caja11 = new JTextField();
+				metodoMagico(panel1, caja11, 470, 165, 100, 20);
+				
 			iF.add(panel1);
 			desktopPane.add(iF);
 		
