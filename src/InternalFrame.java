@@ -28,6 +28,9 @@ class VentanaPrincipal extends JFrame {
 		testPerform = new JMenu("Test Perform");
 		menuBar.add(testPerform);
 		
+		printing = new JMenu("Printing");
+		menuBar.add(printing);
+		
 	}
 	
 	
