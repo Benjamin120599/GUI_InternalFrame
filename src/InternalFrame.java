@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -52,10 +51,6 @@ class VentanaPrincipal extends JFrame {
 		
 		setJMenuBar(menuBar);
 		
-		//ImageIcon imag1 = new ImageIcon("./src/add.png");
-		//ImageIcon img1 = new ImageIcon(imag1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
-		
-		
 		JToolBar toolBar = new JToolBar();
 			toolBar.add(new JButton("Add", iconos("./src/Add.png")));
 			toolBar.add(new JButton("Edit", iconos("./src/Folder.png")));
@@ -71,7 +66,6 @@ class VentanaPrincipal extends JFrame {
 		add(toolBar, BorderLayout.PAGE_START);
 		
 		// InternalFrame
-		
 		JDesktopPane desktopPane = new JDesktopPane();
 			
 			iF = new JInternalFrame();
@@ -158,6 +152,18 @@ class VentanaPrincipal extends JFrame {
 				JSpinner spinn3 = new JSpinner();
 				metodoMagico(panel1, spinn3, 540, 15, 40, 20);
 				
+				JLabel lbl11 = new JLabel("Lab No.");
+				metodoMagico(panel1, lbl11, 600, 10, 100, 30);
+				
+				JTextField caja7 = new JTextField();
+				metodoMagico(panel1, caja7, 650, 15, 100, 20);
+				
+				JLabel lbl12 = new JLabel("Sample By: ");
+				metodoMagico(panel1, lbl12, 400, 70, 70, 30);
+				
+				JTextField caja8 = new JTextField();
+				metodoMagico(panel1, caja8, 470, 75, 100, 20);
+				
 			iF.add(panel1);
 			desktopPane.add(iF);
 		
@@ -177,22 +183,16 @@ class VentanaPrincipal extends JFrame {
 	
 }
 
-
-
 public class InternalFrame {
 
 	public static void main(String[] args) {
 		
 		SwingUtilities.invokeLater(new Runnable() {
-			
 			@Override
 			public void run() {
 				new VentanaPrincipal();
 			}
 		});
-		
-		
-
 	}
 
 }
