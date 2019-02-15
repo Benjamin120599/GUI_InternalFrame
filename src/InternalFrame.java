@@ -7,10 +7,9 @@ class VentanaPrincipal extends JFrame {
 	JMenuBar menuBar;
 	JMenu masters, booking, testPerform, printing, transaction, labReports, settings, utilities, window, help;
 	
-	
 	public VentanaPrincipal() {
 		
-		getContentPane().setLayout(null);
+		getContentPane().setLayout(new BorderLayout());
 		setSize(900, 600);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -51,11 +50,23 @@ class VentanaPrincipal extends JFrame {
 		
 		setJMenuBar(menuBar);
 		
-		JToolBar toolBar = new JToolBar();
-			
+		//ImageIcon imag1 = new ImageIcon("./src/add.png");
+		//ImageIcon img1 = new ImageIcon(imag1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
 		
+		
+		JToolBar toolBar = new JToolBar();
+			toolBar.add(new JButton("Add", iconos("./src/add.png")));
+			toolBar.add(new JButton("Save"));
 		add(toolBar, BorderLayout.PAGE_START);
 		
+	}
+	
+	public ImageIcon iconos(String ruta) {
+		
+		ImageIcon imag = new ImageIcon(ruta+"");
+		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		
+		return img;
 	}
 	
 	
