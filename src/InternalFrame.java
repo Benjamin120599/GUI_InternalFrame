@@ -22,6 +22,9 @@ class VentanaPrincipal extends JFrame {
 		masters = new JMenu("Masters");
 		menuBar.add(masters);
 		
+		booking = new JMenu("Booking");
+		menuBar.add(booking);
+		
 		
 	}
 	
