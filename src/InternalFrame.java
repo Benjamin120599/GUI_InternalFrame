@@ -143,10 +143,20 @@ class VentanaPrincipal extends JFrame {
 				JLabel lbl8 = new JLabel("Date");
 				metodoMagico(panel1, lbl8, 250, 10, 100, 30);
 				
-				JSpinner spinn = new JSpinner();
-				metodoMagico(panel1, spinn, 280, 15, 100, 20);
+				JSpinner spinn1 = new JSpinner();
+				metodoMagico(panel1, spinn1, 280, 15, 100, 20);
 				
+				JLabel lbl9 = new JLabel("*Time (hh:mm)");
+				metodoMagico(panel1, lbl9, 390, 10, 100, 30);
 				
+				JLabel lbl10 = new JLabel(":");
+				metodoMagico(panel1, lbl10, 530, 10, 100, 30);
+				
+				JSpinner spinn2 = new JSpinner();
+				metodoMagico(panel1, spinn2, 480, 15, 40, 20);
+				
+				JSpinner spinn3 = new JSpinner();
+				metodoMagico(panel1, spinn3, 540, 15, 40, 20);
 				
 			iF.add(panel1);
 			desktopPane.add(iF);
