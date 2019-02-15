@@ -6,6 +6,7 @@ class VentanaPrincipal extends JFrame {
 	
 	JMenuBar menuBar;
 	JMenu masters, booking, testPerform, printing, transaction, labReports, settings, utilities, window, help;
+	JInternalFrame iF;
 	
 	public VentanaPrincipal() {
 		
@@ -66,14 +67,31 @@ class VentanaPrincipal extends JFrame {
 			toolBar.add(new JButton("Settings", iconos("./src/Settings.png")));
 			toolBar.add(new JButton("Delete", iconos("./src/Delete.png")));
 			toolBar.add(new JButton("Exit", iconos("./src/Exit.png")));
-			
 		add(toolBar, BorderLayout.PAGE_START);
 		
+		// InternalFrame
+		
+		JDesktopPane desktopPane = new JDesktopPane();
+			
+			iF = new JInternalFrame();
+			iF.getContentPane().setLayout(null);
+			iF.setSize(890, 510);
+			iF.setClosable(false);
+			iF.setResizable(false);
+			iF.setDefaultCloseOperation(HIDE_ON_CLOSE);
+			iF.setVisible(true);
+			
+			JPanel panel1 = new JPanel();
+				
+		
+			desktopPane.add(iF);
+		
+		add(desktopPane, BorderLayout.CENTER);
 	}
 	
 	public ImageIcon iconos(String ruta) {
 		ImageIcon imag = new ImageIcon(ruta+"");
-		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT));
+		ImageIcon img = new ImageIcon(imag.getImage().getScaledInstance(23, 23, Image.SCALE_DEFAULT));
 		return img;
 	}
 	
