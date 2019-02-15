@@ -82,8 +82,13 @@ class VentanaPrincipal extends JFrame {
 			iF.setVisible(true);
 			
 			JPanel panel1 = new JPanel();
+				panel1.setBackground(Color.WHITE);
+				//panel1.setSize(890, 255);
+				panel1.setBounds(5, 5, 870, 245);
 				
-		
+				
+				
+			iF.add(panel1);
 			desktopPane.add(iF);
 		
 		add(desktopPane, BorderLayout.CENTER);
