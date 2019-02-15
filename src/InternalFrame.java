@@ -133,6 +133,13 @@ class VentanaPrincipal extends JFrame {
 				caja5.setHorizontalAlignment(JTextField.RIGHT);
 				metodoMagico(panel1, caja5, 280, 75, 30, 20);
 				
+				JLabel lbl7 = new JLabel("Days: ");
+				metodoMagico(panel1, lbl7, 315, 70, 70, 30);
+				
+				JTextField caja6 = new JTextField("0");
+				caja6.setHorizontalAlignment(JTextField.RIGHT);
+				metodoMagico(panel1, caja6, 350, 75, 30, 20);
+				
 				
 				
 			iF.add(panel1);
