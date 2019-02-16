@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.*;
 
 class VentanaPrincipal extends JFrame {
@@ -6,7 +8,7 @@ class VentanaPrincipal extends JFrame {
 	JMenuBar menuBar;
 	JMenu masters, booking, testPerform, printing, transaction, labReports, settings, utilities, window, help;
 	JInternalFrame iF;
-	JPanel panel1;
+	JPanel panel1, panel2;
 	
 	public VentanaPrincipal() {
 		
@@ -78,7 +80,7 @@ class VentanaPrincipal extends JFrame {
 			
 			panel1 = new JPanel();
 				panel1.setBackground(Color.WHITE);
-				panel1.setBounds(5, 5, 870, 245);
+				panel1.setBounds(5, 5, 870, 200);
 				panel1.setLayout(null);
 				
 				JLabel lbl1 = new JLabel("Patient ID: ");
@@ -183,6 +185,26 @@ class VentanaPrincipal extends JFrame {
 				metodoMagico(panel1, caja11, 470, 165, 100, 20);
 				
 			iF.add(panel1);
+			
+			panel2 = new JPanel();
+				panel2.setBackground(Color.WHITE);
+				panel2.setBounds(5, 210, 870, 200);
+				panel2.setLayout(null);
+				
+				JTable table = new JTable(2,7);
+				table.setBounds(10, 10, 600, 50);
+				table.setValueAt("Test ID", 0, 0);
+				table.setValueAt("Test Name", 0, 1);
+				table.setValueAt("Rate", 0, 2);
+				table.setValueAt("Disc %", 0, 3);
+				table.setValueAt("Discount Amount", 0, 4);
+				table.setValueAt("Tax(%)", 0, 5);
+				table.setValueAt("Tax Amt", 0, 6);
+				
+				
+				panel2.add(table);
+			
+			iF.add(panel2);
 			desktopPane.add(iF);
 		
 		add(desktopPane, BorderLayout.CENTER);
